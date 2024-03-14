@@ -1,8 +1,6 @@
 import matplotlib.pyplot as plt
 import time
 
-# print(time.time())
-
 x = []
 y = []
 iter = -1
@@ -58,9 +56,6 @@ startDNC = time.perf_counter()
 bezierCurve(xBrute[0], yBrute[0], conX, conY, tempX, tempY, 0)
 endDNC = time.perf_counter()
 
-# print(startDNC)
-# print(endDNC)
-
 print("DnC: ", end = "")
 print(endDNC-startDNC)
 
@@ -68,25 +63,11 @@ startBF = time.perf_counter()
 bruteForce(x[0], y[0], conX, conY, tempX, tempY, iter)
 endBF = time.perf_counter()
 
-# print(startBF)
-# print(endBF)
-
 print("Brute Force: ", end = "")
 print(endBF-startBF)
 
 x.append(tempX)
-# xBrute.append(tempX)
 y.append(tempY)
-# yBrute.append(tempY)
-
-# print(x)
-# print(y)
-# print(xBrute)
-# print(yBrute)
-
-print(len(x))
-print(len(xBrute))
-
 
 # display
 plt.subplot(1, 2, 1)
