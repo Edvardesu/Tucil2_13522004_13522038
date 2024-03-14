@@ -52,36 +52,52 @@ xBrute.append(tempX)
 y.append(tempY)
 yBrute.append(tempY)
 
-conX = int(input("Titik kontrol x :"))
-conY = int(input("Titik kontrol y :"))
+# mainkan
+pointsX = []
+pointsY = []
+kontrols = int(input("Kontrolem ono piro : "))
+for i in range (kontrols):
+    conX = int(input("Titik kontrol x :"))
+    x.append(conX)
+    conY = int(input("Titik kontrol y :"))
+    y.append(conY)
 
 tempX = int(input("Titik akhir x :"))
+x.append(tempX)
 tempY = int(input("Titik akhir y :"))
+y.append(tempY)
 iter = int(input("Masukkan jumlah iterasi : "))
 
-startDNC = time.perf_counter()
-bezierCurve(xBrute[0], yBrute[0], conX, conY, tempX, tempY, 0)
-endDNC = time.perf_counter()
+for i in range (kontrols):
+    bezierCurve(x[i], y[i], x[i+1], y[i+1], x[i+2], y[i+2], 0)
 
-print("DnC: ", end = "")
-print(endDNC-startDNC)
 
-startBF = time.perf_counter()
-bruteForce(x[0], y[0], conX, conY, tempX, tempY, iter)
-endBF = time.perf_counter()
 
-print("Brute Force: ", end = "")
-print(endBF-startBF)
+# startDNC = time.perf_counter()
+# bezierCurve(xBrute[0], yBrute[0], conX, conY, tempX, tempY, 0)
+# endDNC = time.perf_counter()
+
+# print("DnC: ", end = "")
+# print(endDNC-startDNC)
+
+# bezierCurve(xBrute[0], yBrute[0], conX, conY, tempX, tempY, 0)
+
+# startBF = time.perf_counter()
+# bruteForce(x[0], y[0], conX, conY, tempX, tempY, iter)
+# endBF = time.perf_counter()
+
+# print("Brute Force: ", end = "")
+# print(endBF-startBF)
 
 # x.append(tempX)
 # y.append(tempY)
 
-# print(x)
-# print(y)
+print(x)
+print(y)
 
 # display
-plt.subplot(1, 2, 1)
+# plt.subplot(1, 2, 1)
 plt.plot(x, y)
-plt.subplot(1, 2, 2)
-plt.plot(xBrute, yBrute)
+# plt.subplot(1, 2, 2)
+# plt.plot(xBrute, yBrute)
 plt.show()
