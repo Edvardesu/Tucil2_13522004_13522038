@@ -31,12 +31,13 @@ def b(P0, P1, P2, t):
     return (1-t)**2 * P0 + 2*(1-t)*t*P1 + t*t*P2
 
 def bruteForce(P0X, P0Y, P1X, P1Y, P2X, P2Y, iteration):
-    # t = 0
-    for i in range((iteration) + 1):
-        ansX = b(P0X, P1X, P2X, i/iteration)
-        ansY = b(P0Y, P1Y, P2Y, i/iteration)
+    t = 1/(2**iteration)
+    while t <= 1:
+        ansX = b(P0X, P1X, P2X, t)
+        ansY = b(P0Y, P1Y, P2Y, t)
         xBrute.append(ansX)
         yBrute.append(ansY)
+        t += 1/(2**iteration)
 
 # input
 tempX = int(input("Titik awal x :"))
@@ -64,7 +65,7 @@ print("DnC: ", end = "")
 print(endDNC-startDNC)
 
 startBF = time.perf_counter()
-bruteForce(x[0], y[0], conX, conY, tempX, tempY, iter*2)
+bruteForce(x[0], y[0], conX, conY, tempX, tempY, iter)
 endBF = time.perf_counter()
 
 # print(startBF)
@@ -74,9 +75,9 @@ print("Brute Force: ", end = "")
 print(endBF-startBF)
 
 x.append(tempX)
-xBrute.append(tempX)
+# xBrute.append(tempX)
 y.append(tempY)
-yBrute.append(tempY)
+# yBrute.append(tempY)
 
 # print(x)
 # print(y)
