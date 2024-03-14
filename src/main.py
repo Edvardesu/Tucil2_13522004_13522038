@@ -8,6 +8,7 @@ iter = -1
 def findMidPoint(x1, y1, x2, y2):
     ansX = (x1+x2)/2
     ansY = (y1+y2)/2
+    drawLines(x1, y1, x2, y2)
     return ansX, ansY
 
 def bezierCurve(leftPointX, leftPointY, controlX, controlY, rightPointX, rightPointY, curIteration):
@@ -25,6 +26,9 @@ def bezierCurve(leftPointX, leftPointY, controlX, controlY, rightPointX, rightPo
 xBrute = []
 yBrute = []
 
+def drawLines(x1, y1, x2, y2):
+    plt.plot([x1, x2], [y1, y2], marker="o", markersize=3, markeredgecolor="red", markerfacecolor="red")
+
 def b(P0, P1, P2, t):
     return (1-t)**2 * P0 + 2*(1-t)*t*P1 + t*t*P2
 
@@ -37,9 +41,13 @@ def bruteForce(P0X, P0Y, P1X, P1Y, P2X, P2Y, iteration):
         yBrute.append(ansY)
         t += 1/(2**iteration)
 
+# pehX = []
+# pehY = []
 # input
 tempX = int(input("Titik awal x :"))
 tempY = int(input("Titik awal y :"))
+# pehX.append(tempX)
+# pehY.append(tempY)
 x.append(tempX)
 xBrute.append(tempX)
 y.append(tempY)
@@ -69,9 +77,20 @@ print(endBF-startBF)
 x.append(tempX)
 y.append(tempY)
 
+print(x)
+print(y)
+
+# pehX.append(conX)
+# pehY.append(conY)
+# pehX.append(tempX)
+# pehY.append(tempY)
+# plt.plot(pehX, pehY, marker="o", markersize=10, markeredgecolor="red", markerfacecolor="red")
+
+
+
 # display
-plt.subplot(1, 2, 1)
+# plt.subplot(1, 2, 1)
 plt.plot(x, y)
-plt.subplot(1, 2, 2)
-plt.plot(xBrute, yBrute)
+# plt.subplot(1, 2, 2)
+# plt.plot(xBrute, yBrute)
 plt.show()
