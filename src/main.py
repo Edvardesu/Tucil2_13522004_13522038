@@ -80,8 +80,8 @@ print(endBF-startBF)
 # print(y)
 
 # display
-plt.subplot(1, 2, 1)
-plt.plot(x, y)
-plt.subplot(1, 2, 2)
-plt.plot(xBrute, yBrute)
+# plt.subplot(1, 2, 1)
+# plt.plot(x, y)
+# plt.subplot(1, 2, 2)
+# plt.plot(xBrute, yBrute)
 plt.show()

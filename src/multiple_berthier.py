@@ -8,7 +8,7 @@ iter = -1
 def findMidPoint(x1, y1, x2, y2):
     ansX = (x1+x2)/2
     ansY = (y1+y2)/2
-    drawLines(x1, y1, x2, y2)
+    # drawLines(x1, y1, x2, y2)
     return ansX, ansY
 
 def bezierCurve(leftPointX, leftPointY, controlX, controlY, rightPointX, rightPointY, curIteration):
