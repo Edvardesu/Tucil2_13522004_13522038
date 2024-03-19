@@ -40,6 +40,7 @@ Program akan meminta beberapa masukan dari pengguna melalui terminal/command pro
 - Menggunakan animasi?: Pilihan pengguna apakah ingin menampilkan animasi proses pembentukan kurva (ya/tidak).
 
 Masukan harus dimasukkan sesuai urutan di atas ketika program meminta.
+SEMUA INPUT, KECUALI YANG TERAKHIR (MENGGUNAKAN ANIMASI), HARUS BERUPA ANGKA (BILANGAN BULAT)
 
 ## Identitas Pembuat Program
 
