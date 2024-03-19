@@ -1,18 +1,24 @@
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-import numpy as np
+import time
 
 # Initialize lists to store the points
 x = []
+xBrute = []
 y = []
 lines = []
+yBrute = []
 
 # Function to find the midpoint and store the line endpoints
 def findMidPoint(x1, y1, x2, y2):
     ansX = (x1 + x2) / 2
     ansY = (y1 + y2) / 2
-    lines.append(((x1, y1), (x2, y2)))
+    # lines.append(((x1, y1), (x2, y2)))
+    # drawLines(x1, y1, x2, y2)
     return ansX, ansY
+
+def drawLines(x1, y1, x2, y2):
+    plt.plot([x1, x2], [y1, y2], markersize=3, markeredgecolor="red", markerfacecolor="red")
 
 # Recursive function to generate the bezier curve points
 def bezierCurve(leftPointX, leftPointY, controlX, controlY, rightPointX, rightPointY, curIteration, maxIterations):
@@ -20,11 +26,25 @@ def bezierCurve(leftPointX, leftPointY, controlX, controlY, rightPointX, rightPo
         midPointLeftX, midPointLeftY = findMidPoint(leftPointX, leftPointY, controlX, controlY)
         midPointRightX, midPointRightY = findMidPoint(rightPointX, rightPointY, controlX, controlY)
         midX, midY = findMidPoint(midPointLeftX, midPointLeftY, midPointRightX, midPointRightY)
-        
+        # kiri
         bezierCurve(leftPointX, leftPointY, midPointLeftX, midPointLeftY, midX, midY, curIteration + 1, maxIterations)
         x.append(midX)
         y.append(midY)
+        # kanan
         bezierCurve(midX, midY, midPointRightX,  midPointRightY, rightPointX, rightPointY, curIteration + 1, maxIterations)
+
+# Brute Force Approach
+def b(P0, P1, P2, t):
+    return (1-t)**2 * P0 + 2*(1-t)*t*P1 + t*t*P2        
+
+def bruteForce(P0X, P0Y, P1X, P1Y, P2X, P2Y, iteration):
+    t = 1/(2**iteration)
+    while t <= 1:
+        ansX = b(P0X, P1X, P2X, t)
+        ansY = b(P0Y, P1Y, P2Y, t)
+        xBrute.append(ansX)
+        yBrute.append(ansY)
+        t += 1/(2**iteration)
 
 # Function to initialize the animation
 def init():
@@ -42,19 +62,51 @@ ax.set_xlim(0, 10)
 ax.set_ylim(0, 10)
 line, = ax.plot([], [], 'r', lw=2)
 
-# Example input
-x.append(1) # Start x
-y.append(1) # Start y
-conX = 5    # Control point x
-conY = 10   # Control point y
-x.append(9) # End x
-y.append(1) # End y
-iterations = 4 # Number of iterations
+# input
+print("  ______           _ __   ___      ______    __                     __   ___        ______                                         ")
+print(" /_  __/_  _______(_) /  |__ \    / ____/___/ /_  ______ __________/ /  ( _ )      / ____/________ _____  ________  ______________ ")
+print("  / / / / / / ___/ / /   __/ /   / __/ / __  / / / / __ `/ ___/ __  /  / __ \/|   / /_  / ___/ __ `/ __ \/ ___/ _ \/ ___/ ___/ __ \\")
+print(" / / / /_/ / /__/ / /   / __/   / /___/ /_/ / /_/ / /_/ / /  / /_/ /  / /_/  <   / __/ / /  / /_/ / / / / /__/  __(__  ) /__/ /_/ /")
+print("/_/  \__,_/\___/_/_/   /____/  /_____/\__,_/\__,_/\__,_/_/   \__,_/   \____/\/  /_/   /_/   \__,_/_/ /_/\___/\___/____/\___/\____/ ")
+                                                                                                                                   
+tempX = int(input("Titik awal x :"))
+tempY = int(input("Titik awal y :"))
+x.append(tempX)
+xBrute.append(tempX)
+y.append(tempY)
+yBrute.append(tempY)
+
+conX = int(input("Titik kontrol x :"))
+conY = int(input("Titik kontrol y :"))
+
+tempX = int(input("Titik akhir x :"))
+tempY = int(input("Titik akhir y :"))
+
+
+iter = int(input("Masukkan jumlah iterasi : "))
 
 # Generate bezier curve points
-bezierCurve(x[0], y[0], conX, conY, x[1], y[1], 0, iterations)
+
+startDNC = time.perf_counter()
+bezierCurve(x[0], y[0], conX, conY, tempX, tempY, 0, iter)
+endDNC = time.perf_counter()
+
+print("\nWaktu eksekusi menggunakan Divide and Conquer: ", end = "")
+print(endDNC-startDNC)
+
+startBF = time.perf_counter()
+bruteForce(x[0], y[0], conX, conY, tempX, tempY, iter)
+endBF = time.perf_counter()
+
+print("\nWaktu eksekusi menggunakan Brute Force: ", end = "")
+print(endBF-startBF)
+
+x.append(tempX)
+y.append(tempY)
 
 # Create animation
-ani = FuncAnimation(fig, update, frames=range(len(lines)), init_func=init, blit=True, interval=500)
+# ani = FuncAnimation(fig, update, frames=range(len(lines)), init_func=init, blit=True, interval=500)
+
+plt.plot(x, y)
 
 plt.show()

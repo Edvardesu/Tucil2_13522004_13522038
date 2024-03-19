@@ -81,7 +81,7 @@ print(endBF-startBF)
 
 # display
 # plt.subplot(1, 2, 1)
-# plt.plot(x, y)
+plt.plot(x, y)
 # plt.subplot(1, 2, 2)
 # plt.plot(xBrute, yBrute)
 plt.show()
