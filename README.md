@@ -1,21 +1,20 @@
-# tugas Kecil 2 IF2211 Strategi Algoritma Semester II tahun 2023/2024
+# Tugas Kecil 2 IF2211 Strategi Algoritma Semester II tahun 2023/2024
 
 ## Deskripsi Program
 
 Program ini adalah sebuah implementasi visualisasi kurva Bezier menggunakan Python. Program membandingkan dua metode dalam menghitung titik-titik pada kurva Bezier: metode rekursif "Divide and Conquer" dan metode "Brute Force". Pengguna dapat memasukkan titik awal, titik kontrol, dan titik akhir kurva, serta jumlah iterasi untuk kedua metode tersebut. Program ini juga menawarkan pilihan untuk menampilkan proses pembentukan kurva melalui animasi menggunakan Matplotlib.
 
 ## Kebutuhan Program
+### Requirements:
 
-## Requirement:
+- Python 3.x
+- Matplotlib
+- termcolor
 
-* Python 3.x
-* Matplotlib
-* termcolor
-
-## Instalasi:
+### Instalasi:
 
 Untuk menjalankan program ini, Anda perlu memastikan Python 3.x sudah terinstal di sistem Anda. Selain itu, Anda juga perlu menginstal Matplotlib dan termcolor. Anda dapat menginstal kedua library tersebut menggunakan pip. Jalankan perintah berikut di terminal atau command prompt:
-``` pip install matplotlib termcolor ```
+`pip install matplotlib termcolor`
 
 ## Cara Menjalankan Program
 
