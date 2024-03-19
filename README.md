@@ -5,6 +5,7 @@
 Program ini adalah sebuah implementasi visualisasi kurva Bezier menggunakan Python. Program membandingkan dua metode dalam menghitung titik-titik pada kurva Bezier: metode rekursif "Divide and Conquer" dan metode "Brute Force". Pengguna dapat memasukkan titik awal, titik kontrol, dan titik akhir kurva, serta jumlah iterasi untuk kedua metode tersebut. Program ini juga menawarkan pilihan untuk menampilkan proses pembentukan kurva melalui animasi menggunakan Matplotlib.
 
 ## Kebutuhan Program
+
 ### Requirements:
 
 - Python 3.x
@@ -14,7 +15,8 @@ Program ini adalah sebuah implementasi visualisasi kurva Bezier menggunakan Pyth
 ### Instalasi:
 
 Untuk menjalankan program ini, Anda perlu memastikan Python 3.x sudah terinstal di sistem Anda. Selain itu, Anda juga perlu menginstal Matplotlib dan termcolor. Anda dapat menginstal kedua library tersebut menggunakan pip. Jalankan perintah berikut di terminal atau command prompt:
-`pip install matplotlib termcolor`
+`pip install matplotlib`
+```pip install termcolor```
 
 ## Cara Menjalankan Program
 
@@ -22,7 +24,7 @@ Untuk menjalankan program ini, Anda perlu memastikan Python 3.x sudah terinstal 
 2. Buka terminal atau command prompt.
 3. Navigasi ke direktori dimana script Python disimpan. Dalam project ini, script utama Python disimpan dalam src
 4. Jalankan program dengan perintah:
-   python namafile.py
+   `python main.py`
 
 ## Identitas Pembuat Program
 
