@@ -30,17 +30,17 @@ Untuk menjalankan program ini, Anda perlu memastikan Python 3.x sudah terinstal 
 
 Program akan meminta beberapa masukan dari pengguna melalui terminal/command prompt, yang harus dimasukkan sebagai berikut:
 
-- Titik awal x: Nilai koordinat x untuk titik awal kurva Bezier (bilangan bulat).
-- Titik awal y: Nilai koordinat y untuk titik awal kurva Bezier (bilangan bulat).
-- Titik kontrol x: Nilai koordinat x untuk titik kontrol kurva Bezier (bilangan bulat).
-- Titik kontrol y: Nilai koordinat y untuk titik kontrol kurva Bezier (bilangan bulat).
-- Titik akhir x: Nilai koordinat x untuk titik akhir kurva Bezier (bilangan bulat).
-- Titik akhir y: Nilai koordinat y untuk titik akhir kurva Bezier (bilangan bulat).
+- Titik awal x: Nilai koordinat x untuk titik awal kurva Bezier (bilangan).
+- Titik awal y: Nilai koordinat y untuk titik awal kurva Bezier (bilangan).
+- Titik kontrol x: Nilai koordinat x untuk titik kontrol kurva Bezier (bilangan).
+- Titik kontrol y: Nilai koordinat y untuk titik kontrol kurva Bezier (bilangan).
+- Titik akhir x: Nilai koordinat x untuk titik akhir kurva Bezier (bilangan).
+- Titik akhir y: Nilai koordinat y untuk titik akhir kurva Bezier (bilangan).
 - Jumlah iterasi: Jumlah iterasi yang diinginkan untuk proses pembentukan kurva (bilangan bulat).
 - Menggunakan animasi?: Pilihan pengguna apakah ingin menampilkan animasi proses pembentukan kurva (ya/tidak).
 
 Masukan harus dimasukkan sesuai urutan di atas ketika program meminta.
-SEMUA INPUT, KECUALI YANG TERAKHIR (MENGGUNAKAN ANIMASI), HARUS BERUPA ANGKA (BILANGAN BULAT)
+#### SEMUA INPUT, KECUALI YANG TERAKHIR (MENGGUNAKAN ANIMASI), HARUS BERUPA ANGKA (BILANGAN). INPUT JUMLAH ITERASI ADALAH BERUPA BILANGAN BULAT
 
 ## Identitas Pembuat Program
 

@@ -71,18 +71,18 @@ print("  / / / / / / ___/ / /   __/ /   / __/ / __  / / / / __ `/ ___/ __  /  / 
 print(" / / / /_/ / /__/ / /   / __/   / /___/ /_/ / /_/ / /_/ / /  / /_/ /  / /_/  <   / __/ / /  / /_/ / / / / /__/  __(__  ) /__/ /_/ /")
 print("/_/  \__,_/\___/_/_/   /____/  /_____/\__,_/\__,_/\__,_/_/   \__,_/   \____/\/  /_/   /_/   \__,_/_/ /_/\___/\___/____/\___/\____/ ")
                                                                                                                                    
-tempX = int(input("Titik awal x : "))
-tempY = int(input("Titik awal y : "))
+tempX = float(input("Titik awal x : "))
+tempY = float(input("Titik awal y : "))
 x.append(tempX)
 xBrute.append(tempX)
 y.append(tempY)
 yBrute.append(tempY)
 
-conX = int(input("Titik kontrol x : "))
-conY = int(input("Titik kontrol y : "))
+conX = float(input("Titik kontrol x : "))
+conY = float(input("Titik kontrol y : "))
 
-tempX = int(input("Titik akhir x : "))
-tempY = int(input("Titik akhir y : "))
+tempX = float(input("Titik akhir x : "))
+tempY = float(input("Titik akhir y : "))
 
 iter = int(input("Masukkan jumlah iterasi : "))
 
