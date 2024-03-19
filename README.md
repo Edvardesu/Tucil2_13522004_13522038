@@ -6,21 +6,24 @@ Program ini adalah sebuah implementasi visualisasi kurva Bezier menggunakan Pyth
 
 ## Kebutuhan Program
 
-Requirement:
-Python 3.x
-Matplotlib
-termcolor
-Instalasi:
+## Requirement:
+
+* Python 3.x
+* Matplotlib
+* termcolor
+
+## Instalasi:
+
 Untuk menjalankan program ini, Anda perlu memastikan Python 3.x sudah terinstal di sistem Anda. Selain itu, Anda juga perlu menginstal Matplotlib dan termcolor. Anda dapat menginstal kedua library tersebut menggunakan pip. Jalankan perintah berikut di terminal atau command prompt:
-pip install matplotlib termcolor
+``` pip install matplotlib termcolor ```
 
 ## Cara Menjalankan Program
 
-Pastikan semua requirements sudah terinstal.
-Buka terminal atau command prompt.
-Navigasi ke direktori dimana script Python disimpan. Dalam project ini, script utama Python disimpan dalam src
-Jalankan program dengan perintah:
-python namafile.py
+1. Pastikan semua requirements sudah terinstal.
+2. Buka terminal atau command prompt.
+3. Navigasi ke direktori dimana script Python disimpan. Dalam project ini, script utama Python disimpan dalam src
+4. Jalankan program dengan perintah:
+   python namafile.py
 
 ## Identitas Pembuat Program
 
